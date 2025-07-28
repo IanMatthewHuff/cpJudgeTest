@@ -1,0 +1,20 @@
+.display {
+  background: #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+}
+
+.display-value {
+  color: #00ff00;
+  font-size: 2.5rem;
+  font-family: 'Courier New', monospace;
+  text-align: right;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
