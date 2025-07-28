@@ -41,6 +41,45 @@
             "url": "http://localhost:4173",
             "webRoot": "${workspaceFolder}/dist",
             "preLaunchTask": "npm: preview"
+        },
+        {
+            "name": "Run Tests",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/.bin/vitest",
+            "args": ["run"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_ENV": "test"
+            }
+        },
+        {
+            "name": "Run Tests (Watch Mode)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/.bin/vitest",
+            "args": [],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_ENV": "test"
+            }
+        },
+        {
+            "name": "Debug Tests",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/.bin/vitest",
+            "args": ["run", "--reporter=verbose"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "sourceMaps": true,
+            "smartStep": true,
+            "skipFiles": ["<node_internals>/**"]
         }
     ]
 }
